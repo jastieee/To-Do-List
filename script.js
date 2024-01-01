@@ -37,3 +37,13 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+const icon = document.getElementById("icon");
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")){
+        icon.src = "imgs/bright.png";
+    } else {
+        icon.src = "imgs/dark.png";
+    }
+}
